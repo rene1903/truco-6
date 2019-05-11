@@ -1,0 +1,39 @@
+body {
+    background: darken(tomato, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.sombra-curva {
+    width: 300px;
+    height: 200px;
+    background: lighten(tomato, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.7em;
+    position: relative;
+    &::after,
+    &::before {
+        content: "";
+        width: 96%;
+        height: 10%;
+        background: #FF664B;
+        position: absolute;
+        // border-radius: 50%;
+        bottom: 3%;
+        box-shadow: 0 10px 10px #000;
+        z-index: -1;
+        opacity: .5;
+    }
+    &::before{
+        left: 2%;
+        transform: rotate(-1deg);
+    }
+    &::before{
+        right:2%;
+        transform: rotate(1deg);
+    }
+}
